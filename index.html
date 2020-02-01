@@ -30,9 +30,9 @@
             <img src="assets/iconfinder_search.png" />
           </button>
         </div>
-        <button class="icon" type="button">Sign in</button>
+        <button class="icon signIn" type="button">Sign in</button>
         <button class="icon" type="button">
-          <img src="assets/cart.png" />
+          <img class="cart" src="assets/cart.png" />
         </button>
       </div>
       <ul class="navList">
@@ -68,62 +68,445 @@
         <a href=""><li>whiskey jewelry</li></a>
       </ul>
       <main>
-        <div class="sidebar">
-            <ul class="categories">
-              <a href=""><li>All Catergories</li></a>
-              <a href=""><li>Art & Collectibles</li></a>
-              <a href=""><li>Home & Living</li></a>
-              <a href=""><li>Paper & Party Supplies</li></a>
-              <a href=""><li>Weddings</li></a>
+        <ul class="sidebar">
+          <li class="categories noPad">
+            <a class="anchorHover" href="">All Catergories</a>
+            <ul class="list list2">
+              <a href="" class="anchorHover"><li>Art & Collectibles</li></a>
+              <a href="" class="anchorHover"><li>Home & Living</li></a>
+              <a href="" class="anchorHover"><li>Paper & Party Supplies</li></a>
+              <a href="" class="anchorHover"><li>Weddings</li></a>
             </ul>
-            <button class="icon" type="button">
-              <span>+ </span> Show More
+            <button class="icon show" type="button">
+              <span>+</span>
+              <p>Show More</p>
             </button>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </div>
+          <li class="categories">
+            <a href="">Special offers</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="special" name="special" />
+                    FREE shipping
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="special" name="special" />
+                    On sale
+                  </li>
+                </div>
+              </a>
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Ready to ship in</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="readyIn" name="readyIn" />
+                    1 business day
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="readyIn" name="readyIn" />
+                    1-3 business days
+                  </li>
+                </div>
+              </a>
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Price ($)</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="price" name="price" />Under $25
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="price" name="price" />$25 to &75
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="price" name="price" />$75 to $100
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="price" name="price" />Over $100
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li><input type="radio" id="price" name="price" />Custom</li>
+                </div>
+              </a>
+              <li class="range">
+                <input type="text" id="rangeBox" placeholder="Low" />
+                <p>to</p>
+                <input type="text" id="rangeBox" placeholder="High" />
+                <button class="icon" type="button"><span>></span></button>
+              </li>
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Material</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="material" name="material" />
+                    Ceramic
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="material" name="material" />
+                    Cork
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="material" name="material" />
+                    Fabric
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="material" name="material" />
+                    Glass
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="material" name="material" />
+                    Metal
+                  </li>
+                </div>
+              </a>
+              <button class="icon show" type="button">
+                <span>+</span>
+                <p>Show More</p>
+              </button>
+            </ul>
+          </li>
+          <li class="categories">
+            Color
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="color" name="color" />
+                    Beige
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="color" name="color" />
+                    Black
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="color" name="color" />
+                    Blue
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="color" name="color" />
+                    Bronze
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="color" name="color" />
+                    Brown
+                  </li>
+                </div></a
+              >
+              <button class="icon show" type="button">
+                <span>+</span>
+                <p>Show More</p>
+              </button>
+            </ul>
+          </li>
+          <li class="categories">
+            Can be personalized
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="personalized"
+                      name="personalized"
+                    />
+                    Yes
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="personalized"
+                      name="personalized"
+                    />
+                    No
+                  </li>
+                </div></a
+              >
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Occasion</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="occasion" name="occasion" />
+                    Anniversary
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="occasion" name="occasion" />
+                    Baby shower
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="occasion" name="occasion" />
+                    Bachelor party
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="occasion" name="occasion" />
+                    Bachelorette party
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="occasion" name="occasion" />
+                    Birthday
+                  </li>
+                </div></a
+              >
+              <button class="icon show" type="button">
+                <span>+</span>
+                <p>Show More</p>
+              </button>
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Holiday</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="holiday" name="holiday" />
+                    Christmas
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="holiday" name="holiday" />Cinco
+                    de Mayo
+                  </li>
+                </div></a
+              >
+              <a href=""
+                ><div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="holiday" name="holiday" />Easter
+                  </li>
+                </div></a
+              >
+              <a href=""
+                ><div class="anchorHover">
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="holiday"
+                      name="holiday"
+                    />Father's Day
+                  </li>
+                </div></a
+              >
+              <a href=""
+                ><div class="anchorHover">
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="holiday"
+                      name="holiday"
+                    />Halloween
+                  </li>
+                </div></a
+              >
+              <button class="icon show" type="button">
+                <span>+</span>
+                <p>Show More</p>
+              </button>
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Shop Location</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="location" name="location" />Anywhere
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="location" name="location" />United
+                    States
+                  </li>
+                </div>
+              </a>
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="radio" id="location" name="location" />Custom
+                  </li>
+                </div></a
+              >
+              <li class="range">
+                <input
+                  type="text"
+                  id="rangeBox2"
+                  placeholder="Enter Location"
+                />
+                <button class="icon" type="button"><span>></span></button>
+              </li>
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Item type</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li><input type="radio" id="†ype" name="type" />All items</li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li><input type="radio" id="type" name="type" />Handmade</li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li><input type="radio" id="type" name="type" />Vintage</li>
+                </div></a
+              >
+            </ul>
+          </li>
+          <li class="categories">
+            <a href="">Ordering options</a>
+            <ul class="list">
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="options" name="options" />Accepts
+                    Etsy gift cards
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input type="checkbox" id="options" name="options" />Can be
+                    gift-wrapped
+                  </li>
+                </div></a
+              >
+              <a href="">
+                <div class="anchorHover">
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="options"
+                      name="options"
+                    />Customizable
+                  </li>
+                </div></a
+              >
+            </ul>
+          </li>
+          <li class="categories">
+            Ship to<br />
+            <select>
+              <option value="country">United States</option>
+              <option value="country">Canada</option>
+              <option value="country">Mexico</option>
+              <option value="country">Japan</option>
+            </select>
+          </li>
+        </ul>
         <div class="wrapper">
-          <div class="productDisplay">
-            <img src="https://placehold.it/200" />
-            <div class="desricption"></div>
-            <p class="title">Some Title</p>
-            <p class="price">$12.00</p>
+          <div class="displayInfo">
+            <p>
+              <a class="anchorHover" href="">All categories</a
+              ><span class="arrow"> > </span> “whiskey” (76,914 Results)
+            </p>
+            <button class="icon" type="button">
+              <span class="moveLeft">Sort by Relevency</span>
+              <span>&#9660; </span>
+            </button>
           </div>
-          <div class="productDisplay">
-            <img src="https://placehold.it/200" />
-            <div class="desricption"></div>
-            <p class="title">Some Title</p>
-            <p class="price">$12.00</p>
-          </div>
-          <div class="productDisplay">
-            <img src="https://placehold.it/200" />
-            <div class="desricption"></div>
-            <p class="title">Some Title</p>
-            <p class="price">$12.00</p>
-          </div>
-          <div class="productDisplay">
-            <img src="https://placehold.it/200" />
-            <div class="desricption"></div>
-            <p class="title">Some Title</p>
-            <p class="price">$12.00</p>
-          </div>
-          <div class="productDisplay">
-            <img src="https://placehold.it/200" />
-            <div class="desricption"></div>
-            <p class="title">Some Title</p>
-            <p class="price">$12.00</p>
-          </div>
+          <div class="products"></div>
         </div>
       </main>
     </div>
