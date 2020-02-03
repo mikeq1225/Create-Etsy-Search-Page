@@ -10,7 +10,7 @@ const html = items.results
     }
     return `
   <a href="${item.url}"><div class="productDisplay">
-    <img src=${item.Images[0].url_170x135} />
+    <img class="productImage" src=${item.Images[0].url_170x135} />
     <p class="title">${item.title}</p>
     <p class="shopName">${item.Shop.shop_name}</p>
     <p class="price">${currencySymbol}${item.price}</p>
