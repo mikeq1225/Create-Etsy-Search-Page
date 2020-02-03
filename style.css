@@ -37,24 +37,27 @@ h1 {
   align-items: center;
 }
 
-div.search {
-  border-radius: 25px;
+.search {
   border-radius: 25px;
   background-color: rgb(239, 239, 239);
   height: 50px;
   flex-grow: 2;
-  border-style: solid;
+  border: 1px solid rgb(190, 190, 190);
   margin: 15px 30px;
   display: flex;
-  border-color: rgb(190, 190, 190);
+}
+
+.search:hover {
+  border: 1px solid black;
+  transition: 0.5s;
 }
 
 input {
   font-size: 17px;
   padding-left: 15px;
-  background-color: rgb(239, 239, 239);
+  background-color: transparent;
   border-color: transparent;
-  margin: 6px;
+  margin: 9px;
   flex-grow: 2;
 }
 
@@ -63,22 +66,33 @@ input:focus {
 }
 
 .searchX {
-  background-color: rgb(239, 239, 239);
-  margin: 9px 4px;
-  width: 15px;
-  height: 15px;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
 }
 
-.search > button {
-  background-color: rgb(239, 239, 239);
-  height: 35px;
+#iconAlso {
+  padding: 15px;
+  margin-right: 8px;
+}
+
+.spyGlass {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
   border-color: transparent;
-  margin: 5px 15px;
+  margin: 0px 20px 0px 0px;
+  padding: 0px;
 }
 
-.search > button > img {
-  width: 25px;
-  height: 15px;
+#squareLeft {
+  border-radius: 0px 25px 25px 0px;
+}
+
+button img.searchX:hover,
+button img.Spyglass:hover {
+  background-color: rgb(225, 225, 225);
+  transition: 0.25s;
 }
 
 .signIn {
@@ -102,6 +116,7 @@ input:focus {
 
 .icon:hover {
   background-color: rgb(225, 225, 225);
+  transition: 0.25s;
 }
 
 .icon:focus {
@@ -151,10 +166,16 @@ li.storeOptions {
   justify-content: space-between;
   height: 40px;
 }
+
 ul.storeOptions li {
   background-color: rgb(238, 164, 127);
   border-radius: 25px;
   padding: 7px;
+}
+
+.storeOptions li:hover {
+  background-color: rgb(237, 142, 95);
+  padding: 9px;
 }
 
 /* Sidebar styling */
@@ -176,8 +197,9 @@ span {
 }
 
 .categories {
-  font-weight: bold;
   margin: 25px 0px;
+  font-size: 12px;
+  font-weight: 750;
 }
 
 .noPad {
@@ -202,7 +224,12 @@ ul.sidebar {
 .list {
   padding: 0px;
   line-height: 22px;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+ul.list li input {
+  margin: 0px 5px 0px 0px;
+  color: darkgray;
 }
 
 .list2 {
@@ -213,8 +240,13 @@ ul.list li {
   font-weight: normal;
 }
 
+.anchorHover {
+  color: rgb(40, 40, 40);
+}
+
 .anchorHover:hover {
   text-decoration: underline;
+  color: lightgrey;
 }
 
 .range {
@@ -233,12 +265,24 @@ input#rangeBox,
 input#rangeBox2 {
   border-radius: 6px;
   height: 35px;
+  background-color: transparent;
+  border: 1px solid rgb(222, 222, 222);
+  font-size: 12px;
+}
+
+#rangeBox:hover,
+#rangeBox2:hover {
+  border: 1px solid black;
 }
 
 select {
   height: 40px;
   width: 175px;
   font-size: 12px;
+}
+
+select:focus {
+  outline: none;
 }
 
 /* Styling for prouduct display */

@@ -9,7 +9,7 @@ const html = items.results
       currencySymbol += "&euro;"
     }
     return `
-  <a href=""><div class="productDisplay">
+  <a href="${item.url}"><div class="productDisplay">
     <img src=${item.Images[0].url_170x135} />
     <p class="title">${item.title}</p>
     <p class="shopName">${item.Shop.shop_name}</p>
